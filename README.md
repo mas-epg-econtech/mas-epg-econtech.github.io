@@ -22,8 +22,8 @@ no fonts loaded from the network (system fonts + Georgia), no trackers.
 
 ## Publishing to GitHub Pages
 
-1. **Create a new repository** on GitHub (suggested name: `econ-ai-showcase` —
-   the page will live at `https://econtech-mas.github.io/econ-ai-showcase/`).
+1. **Create a new repository** on GitHub (suggested name: `econ-ai` —
+   the page will live at `https://econtech-mas.github.io/econ-ai/`).
 
 2. **Push these files** to the repo's default branch:
 
@@ -33,7 +33,7 @@ no fonts loaded from the network (system fonts + Georgia), no trackers.
    git add index.html images/ README.md
    git commit -m "Initial landing page"
    git branch -M main
-   git remote add origin git@github.com:econtech-mas/econ-ai-showcase.git
+   git remote add origin git@github.com:econtech-mas/econ-ai.git
    git push -u origin main
    ```
 

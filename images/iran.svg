@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="ir-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F3E3C7"/>
+      <stop offset="1" stop-color="#C77852"/>
+    </linearGradient>
+    <linearGradient id="ir-drum" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2E2B2A"/>
+      <stop offset="1" stop-color="#18100C"/>
+    </linearGradient>
+    <radialGradient id="ir-sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F6C16A"/>
+      <stop offset="1" stop-color="#C77852" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#ir-bg)"/>
+
+  <!-- sun haze -->
+  <circle cx="620" cy="140" r="180" fill="url(#ir-sun)"/>
+
+  <!-- stylised chokepoint map (Strait of Hormuz area) -->
+  <g transform="translate(80,140)" opacity="0.92">
+    <!-- Arabian peninsula landmass -->
+    <path d="M 20,60 L 120,40 L 200,60 L 260,80 L 310,140 L 330,220 L 280,260 L 220,260 L 170,230 L 120,240 L 60,220 L 20,180 Z"
+          fill="#8A4A26" opacity="0.85"/>
+    <!-- Iran landmass across water -->
+    <path d="M 260,0 L 380,10 L 460,30 L 500,80 L 470,110 L 400,120 L 340,100 L 300,80 L 280,40 Z"
+          fill="#6E3517" opacity="0.85"/>
+    <!-- water strait -->
+    <path d="M 260,80 Q 300,100 340,100 L 400,120 L 470,110 L 460,140 L 380,140 L 320,135 L 270,120 Z"
+          fill="#2E5468" opacity="0.88"/>
+
+    <!-- chokepoint marker -->
+    <circle cx="360" cy="120" r="10" fill="#E9B24E"/>
+    <circle cx="360" cy="120" r="18" fill="none" stroke="#E9B24E" stroke-width="2" opacity="0.5"/>
+    <circle cx="360" cy="120" r="28" fill="none" stroke="#E9B24E" stroke-width="1.5" opacity="0.3"/>
+
+    <!-- trade route arrows -->
+    <g fill="none" stroke="#2E2B2A" stroke-width="2.5" stroke-linecap="round">
+      <path d="M 360,120 C 320,80 200,60 80,80" stroke-dasharray="5 6"/>
+      <path d="M 360,120 C 420,160 520,200 600,180" stroke-dasharray="5 6"/>
+      <path d="M 360,120 C 330,180 250,210 150,230" stroke-dasharray="5 6"/>
+    </g>
+  </g>
+
+  <!-- oil drum -->
+  <g transform="translate(540,260)">
+    <ellipse cx="70" cy="0" rx="70" ry="14" fill="#3A322C"/>
+    <rect x="0" y="0" width="140" height="140" fill="url(#ir-drum)"/>
+    <ellipse cx="70" cy="140" rx="70" ry="14" fill="#18100C"/>
+    <ellipse cx="70" cy="0" rx="70" ry="14" fill="#4A3E36"/>
+    <!-- bands -->
+    <rect x="0" y="28"  width="140" height="4" fill="#4A3E36"/>
+    <rect x="0" y="56"  width="140" height="4" fill="#4A3E36"/>
+    <rect x="0" y="100" width="140" height="4" fill="#4A3E36"/>
+    <!-- label -->
+    <rect x="18" y="62" width="104" height="32" fill="#E9B24E"/>
+    <text x="70" y="84" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#2E2B2A" text-anchor="middle">HS 27</text>
+  </g>
+
+  <!-- data callout top-right -->
+  <g transform="translate(480,60)">
+    <rect x="0" y="0" width="260" height="58" fill="#FFFFFF" opacity="0.72" rx="6"/>
+    <text x="18" y="24" font-family="Georgia, serif" font-size="12" fill="#6E3517" font-weight="700" letter-spacing="1.4">GULF-ORIGIN OIL SHARE</text>
+    <text x="18" y="48" font-family="Georgia, serif" font-size="22" fill="#C24234" font-weight="700">-14.6% YoY</text>
+  </g>
+
+  <!-- decorative dune line -->
+  <path d="M 0,400 Q 200,380 400,400 T 800,400 L 800,450 L 0,450 Z" fill="#8A4A26" opacity="0.4"/>
+</svg>

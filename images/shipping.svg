@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sh-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E8EEF2"/>
+      <stop offset="1" stop-color="#9FB3BF"/>
+    </linearGradient>
+    <linearGradient id="sh-sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2E5468"/>
+      <stop offset="1" stop-color="#15293A"/>
+    </linearGradient>
+    <linearGradient id="sh-hull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C43E3B"/>
+      <stop offset="1" stop-color="#7A1F1C"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#sh-sky)"/>
+
+  <!-- distant coastline -->
+  <path d="M 0,265 C 120,255 180,272 300,260 C 420,248 500,265 620,258 C 720,252 780,268 800,260 L 800,280 L 0,280 Z"
+        fill="#7A8E99" opacity="0.55"/>
+
+  <!-- sun/moon -->
+  <circle cx="680" cy="110" r="46" fill="#F3D78A" opacity="0.85"/>
+  <circle cx="680" cy="110" r="62" fill="#F3D78A" opacity="0.22"/>
+
+  <!-- sea -->
+  <rect x="0" y="280" width="800" height="170" fill="url(#sh-sea)"/>
+  <!-- waves -->
+  <g stroke="#FFFFFF" stroke-width="1.5" fill="none" opacity="0.28">
+    <path d="M 0,310 Q 40,302 80,310 T 160,310 T 240,310 T 320,310 T 400,310 T 480,310 T 560,310 T 640,310 T 720,310 T 800,310"/>
+    <path d="M 0,340 Q 50,332 100,340 T 200,340 T 300,340 T 400,340 T 500,340 T 600,340 T 700,340 T 800,340"/>
+    <path d="M 0,380 Q 60,372 120,380 T 240,380 T 360,380 T 480,380 T 600,380 T 720,380 T 800,380"/>
+  </g>
+
+  <!-- ship hull -->
+  <g transform="translate(170,240)">
+    <!-- containers stacked -->
+    <g>
+      <rect x="50"  y="-10" width="56" height="30" fill="#2E86A8"/>
+      <rect x="110" y="-10" width="56" height="30" fill="#D88A2D"/>
+      <rect x="170" y="-10" width="56" height="30" fill="#7A9C3F"/>
+      <rect x="230" y="-10" width="56" height="30" fill="#C43E3B"/>
+      <rect x="290" y="-10" width="56" height="30" fill="#2E86A8"/>
+      <rect x="350" y="-10" width="56" height="30" fill="#5C4B82"/>
+      <!-- second row -->
+      <rect x="80"  y="-42" width="56" height="30" fill="#D88A2D"/>
+      <rect x="140" y="-42" width="56" height="30" fill="#2E86A8"/>
+      <rect x="200" y="-42" width="56" height="30" fill="#7A9C3F"/>
+      <rect x="260" y="-42" width="56" height="30" fill="#3F6F55"/>
+      <rect x="320" y="-42" width="56" height="30" fill="#C43E3B"/>
+      <!-- third row -->
+      <rect x="140" y="-74" width="56" height="30" fill="#7A9C3F"/>
+      <rect x="200" y="-74" width="56" height="30" fill="#D88A2D"/>
+      <rect x="260" y="-74" width="56" height="30" fill="#2E86A8"/>
+      <!-- container details -->
+      <g stroke="#0A0A0A" stroke-width="0.8" opacity="0.3" fill="none">
+        <line x1="50"  y1="5"  x2="406" y2="5"/>
+        <line x1="80"  y1="-27" x2="376" y2="-27"/>
+      </g>
+    </g>
+
+    <!-- hull -->
+    <path d="M 0,20 L 440,20 L 420,80 L 30,80 Z" fill="url(#sh-hull)"/>
+    <rect x="0" y="20" width="440" height="6" fill="#FFFFFF" opacity="0.35"/>
+
+    <!-- bridge -->
+    <rect x="380" y="-46" width="56" height="56" fill="#F2EDE5"/>
+    <rect x="388" y="-38" width="10" height="10" fill="#2E5468"/>
+    <rect x="404" y="-38" width="10" height="10" fill="#2E5468"/>
+    <rect x="420" y="-38" width="10" height="10" fill="#2E5468"/>
+    <rect x="388" y="-22" width="10" height="10" fill="#2E5468"/>
+    <rect x="404" y="-22" width="10" height="10" fill="#2E5468"/>
+    <rect x="420" y="-22" width="10" height="10" fill="#2E5468"/>
+    <!-- funnel -->
+    <rect x="398" y="-78" width="20" height="32" fill="#C43E3B"/>
+    <rect x="398" y="-78" width="20" height="6" fill="#7A1F1C"/>
+  </g>
+
+  <!-- sparkline overlay (nowcast deviation) -->
+  <g transform="translate(60,70)">
+    <rect x="-14" y="-12" width="220" height="96" fill="#FFFFFF" opacity="0.55" rx="6"/>
+    <text x="0" y="4" font-family="Georgia, serif" font-size="12" fill="#2E5468" font-weight="700" letter-spacing="1">DEVIATION FROM BASELINE</text>
+    <polyline points="0,40 20,38 40,42 60,36 80,44 100,52 120,62 140,68 160,74 180,70"
+              fill="none" stroke="#C43E3B" stroke-width="2.2"/>
+    <line x1="0" y1="40" x2="180" y2="40" stroke="#7A8E99" stroke-width="1" stroke-dasharray="3 3"/>
+  </g>
+</svg>

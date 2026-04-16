@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sg-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EEF1F5"/>
+      <stop offset="1" stop-color="#B6C2D1"/>
+    </linearGradient>
+    <linearGradient id="sg-doc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E5E9F0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#sg-bg)"/>
+
+  <!-- ambient grid -->
+  <g stroke="#8B9AAB" stroke-width="0.5" opacity="0.25">
+    <line x1="0" y1="90"  x2="800" y2="90"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="270" x2="800" y2="270"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+  </g>
+
+  <!-- back document -->
+  <g transform="translate(120,80) rotate(-4)">
+    <rect x="0" y="0" width="260" height="330" fill="url(#sg-doc)" stroke="#9FAEC0" stroke-width="1.5"/>
+    <g fill="#8B9AAB">
+      <rect x="24" y="30" width="210" height="8" rx="2" opacity="0.8"/>
+      <rect x="24" y="52" width="180" height="5" rx="2" opacity="0.5"/>
+      <rect x="24" y="66" width="210" height="5" rx="2" opacity="0.5"/>
+      <rect x="24" y="80" width="150" height="5" rx="2" opacity="0.5"/>
+      <rect x="24" y="106" width="210" height="5" rx="2" opacity="0.4"/>
+      <rect x="24" y="120" width="190" height="5" rx="2" opacity="0.4"/>
+      <rect x="24" y="134" width="210" height="5" rx="2" opacity="0.4"/>
+      <rect x="24" y="148" width="160" height="5" rx="2" opacity="0.4"/>
+    </g>
+    <!-- highlighted risk words -->
+    <rect x="60"  y="174" width="90" height="16" fill="#F3C77A" opacity="0.8"/>
+    <rect x="110" y="198" width="120" height="16" fill="#E1A7A3" opacity="0.8"/>
+    <rect x="40"  y="222" width="70" height="16" fill="#F3C77A" opacity="0.8"/>
+    <g fill="#8B9AAB">
+      <rect x="24" y="254" width="210" height="5" rx="2" opacity="0.4"/>
+      <rect x="24" y="268" width="190" height="5" rx="2" opacity="0.4"/>
+      <rect x="24" y="282" width="160" height="5" rx="2" opacity="0.4"/>
+    </g>
+  </g>
+
+  <!-- front document -->
+  <g transform="translate(200,110) rotate(3)">
+    <rect x="0" y="0" width="260" height="330" fill="#FFFFFF" stroke="#6F7F92" stroke-width="1.5"/>
+    <text x="24" y="40" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#2E3B4E">RISK FACTORS</text>
+    <g fill="#6F7F92">
+      <rect x="24" y="58" width="210" height="5" rx="2" opacity="0.55"/>
+      <rect x="24" y="72" width="200" height="5" rx="2" opacity="0.55"/>
+      <rect x="24" y="86" width="210" height="5" rx="2" opacity="0.55"/>
+      <rect x="24" y="100" width="150" height="5" rx="2" opacity="0.55"/>
+    </g>
+    <!-- highlighted sentiment phrases -->
+    <rect x="24" y="120" width="110" height="18" fill="#F3C77A"/>
+    <rect x="140" y="120" width="94" height="18" fill="#A9C6A6"/>
+    <rect x="24" y="150" width="170" height="18" fill="#E1A7A3"/>
+    <g fill="#6F7F92">
+      <rect x="24" y="182" width="210" height="5" rx="2" opacity="0.5"/>
+      <rect x="24" y="196" width="180" height="5" rx="2" opacity="0.5"/>
+      <rect x="24" y="210" width="210" height="5" rx="2" opacity="0.5"/>
+    </g>
+    <!-- mini sparkline at bottom -->
+    <polyline points="24,300 60,286 96,292 132,274 168,280 204,262 234,250"
+              fill="none" stroke="#2E5468" stroke-width="2.5"/>
+    <circle cx="234" cy="250" r="4" fill="#C24234"/>
+  </g>
+
+  <!-- sentiment gauge -->
+  <g transform="translate(540,200)">
+    <path d="M 0,80 A 100,100 0 0 1 200,80" fill="none" stroke="#D5DBE3" stroke-width="18"/>
+    <path d="M 0,80 A 100,100 0 0 1 130,10" fill="none" stroke="#C24234" stroke-width="18"/>
+    <path d="M 130,10 A 100,100 0 0 1 200,80" fill="none" stroke="#A9C6A6" stroke-width="18" opacity="0.7"/>
+    <!-- needle -->
+    <line x1="100" y1="80" x2="54" y2="14" stroke="#2E3B4E" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="100" cy="80" r="8" fill="#2E3B4E"/>
+    <text x="100" y="118" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-weight="700" fill="#2E3B4E" letter-spacing="1.2">SENTIMENT INDEX</text>
+  </g>
+
+  <!-- small metric tag -->
+  <g transform="translate(540,330)">
+    <rect x="0" y="0" width="200" height="40" fill="#FFFFFF" stroke="#6F7F92" stroke-width="1"/>
+    <text x="14" y="16" font-family="Georgia, serif" font-size="10" fill="#6F7F92" letter-spacing="1.2">90,445 DOCUMENTS</text>
+    <text x="14" y="32" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#2E3B4E">754 LISTED ENTITIES</text>
+  </g>
+</svg>

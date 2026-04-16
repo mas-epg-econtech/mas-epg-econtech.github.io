@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="gg-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FDF6EC"/>
+      <stop offset="1" stop-color="#F4D8A8"/>
+    </linearGradient>
+    <linearGradient id="gg-tom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E85A4F"/>
+      <stop offset="1" stop-color="#C24234"/>
+    </linearGradient>
+    <linearGradient id="gg-apple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C23B2B"/>
+      <stop offset="1" stop-color="#8A2518"/>
+    </linearGradient>
+    <linearGradient id="gg-tag" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F5EEDF"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#gg-bg)"/>
+
+  <!-- subtle paper grain lines -->
+  <g opacity="0.08" stroke="#8A5A3B" stroke-width="1">
+    <line x1="0" y1="80"  x2="800" y2="80"/>
+    <line x1="0" y1="170" x2="800" y2="170"/>
+    <line x1="0" y1="260" x2="800" y2="260"/>
+    <line x1="0" y1="350" x2="800" y2="350"/>
+  </g>
+
+  <!-- shelf / counter line -->
+  <rect x="0" y="360" width="800" height="90" fill="#E6C48C"/>
+  <rect x="0" y="358" width="800" height="4" fill="#B88D51"/>
+
+  <!-- basket body -->
+  <g transform="translate(230,200)">
+    <path d="M 30,40 L 320,40 L 290,170 L 60,170 Z"
+          fill="#F9E4B8" stroke="#9C6B2A" stroke-width="3"/>
+    <!-- basket weave lines -->
+    <g stroke="#9C6B2A" stroke-width="1.6" opacity="0.55">
+      <line x1="50"  y1="60"  x2="310" y2="60"/>
+      <line x1="58"  y1="90"  x2="302" y2="90"/>
+      <line x1="66"  y1="120" x2="294" y2="120"/>
+      <line x1="74"  y1="150" x2="286" y2="150"/>
+      <line x1="90"  y1="40"  x2="72"  y2="170"/>
+      <line x1="140" y1="40"  x2="128" y2="170"/>
+      <line x1="200" y1="40"  x2="200" y2="170"/>
+      <line x1="260" y1="40"  x2="272" y2="170"/>
+    </g>
+    <!-- handle -->
+    <path d="M 90,40 C 120,-20 240,-20 290,40" stroke="#9C6B2A" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- produce spilling out / on top -->
+  <!-- tomato -->
+  <circle cx="300" cy="215" r="38" fill="url(#gg-tom)"/>
+  <path d="M 292,184 Q 300,170 312,175 Q 306,190 300,188 Z" fill="#5FA24A"/>
+  <ellipse cx="288" cy="202" rx="10" ry="6" fill="#FFFFFF" opacity="0.35"/>
+
+  <!-- apple -->
+  <circle cx="400" cy="210" r="34" fill="url(#gg-apple)"/>
+  <path d="M 398,178 Q 404,166 416,170" stroke="#5D3A1D" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M 406,176 Q 416,168 430,174 Q 422,186 408,184 Z" fill="#6FA95C"/>
+  <ellipse cx="390" cy="198" rx="9" ry="5" fill="#FFFFFF" opacity="0.3"/>
+
+  <!-- bread loaf -->
+  <g transform="translate(470,178)">
+    <rect x="0" y="0" width="120" height="58" rx="26" fill="#D29A55"/>
+    <rect x="0" y="0" width="120" height="18" rx="10" fill="#E5B573"/>
+    <line x1="30" y1="16" x2="30" y2="54" stroke="#8A5A26" stroke-width="2" opacity="0.6"/>
+    <line x1="60" y1="16" x2="60" y2="54" stroke="#8A5A26" stroke-width="2" opacity="0.6"/>
+    <line x1="90" y1="16" x2="90" y2="54" stroke="#8A5A26" stroke-width="2" opacity="0.6"/>
+  </g>
+
+  <!-- egg -->
+  <ellipse cx="235" cy="225" rx="22" ry="28" fill="#FFFDF5" stroke="#D9C69B" stroke-width="1.5"/>
+
+  <!-- price tag floating top-right -->
+  <g transform="translate(600,90) rotate(-8)">
+    <path d="M 0,0 L 150,0 L 170,28 L 150,56 L 0,56 Z" fill="url(#gg-tag)" stroke="#C24234" stroke-width="2"/>
+    <circle cx="156" cy="28" r="4" fill="#C24234"/>
+    <text x="16" y="22" font-family="Georgia, 'Times New Roman', serif" font-size="14" fill="#6B3A2A" font-weight="600">CPI WEIGHT</text>
+    <text x="16" y="46" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#C24234" font-weight="700">+2.0%</text>
+  </g>
+
+  <!-- small tag left -->
+  <g transform="translate(90,280) rotate(6)">
+    <path d="M 0,0 L 110,0 L 126,22 L 110,44 L 0,44 Z" fill="url(#gg-tag)" stroke="#9C6B2A" stroke-width="1.5"/>
+    <circle cx="114" cy="22" r="3" fill="#9C6B2A"/>
+    <text x="12" y="28" font-family="Georgia, serif" font-size="16" fill="#8A5A26" font-weight="700">$0.49</text>
+  </g>
+
+  <!-- floating small sparkline in sky -->
+  <g transform="translate(60,80)" opacity="0.5">
+    <polyline points="0,30 20,22 40,28 60,16 80,20 100,8 120,14" fill="none" stroke="#C24234" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI-Built Economic Dashboards</title>
+  <meta name="description" content="Six economic dashboards built with Anthropic's Cowork — price monitoring, shipping, trade, sentiment, property, and ASEAN markets.">
+  <style>
+    :root{
+      --bg:#F7F5F0;
+      --panel:#FFFFFF;
+      --ink:#1E2A32;
+      --ink-soft:#4A5A66;
+      --line:#DDD6C8;
+      --accent:#2F4A3E;
+      --accent-warm:#8C5A2A;
+      --shadow:0 1px 2px rgba(20,30,40,.06),0 8px 24px rgba(20,30,40,.06);
+      --shadow-hover:0 2px 4px rgba(20,30,40,.08),0 18px 40px rgba(20,30,40,.14);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      -webkit-font-smoothing:antialiased;
+      line-height:1.55;
+    }
+    .wrap{max-width:1200px;margin:0 auto;padding:72px 32px 96px}
+    header.intro{
+      border-bottom:1px solid var(--line);
+      padding-bottom:36px;
+      margin-bottom:48px;
+    }
+    .eyebrow{
+      font-size:12px;
+      letter-spacing:2.4px;
+      text-transform:uppercase;
+      color:var(--accent-warm);
+      font-weight:600;
+      margin-bottom:14px;
+    }
+    h1{
+      font-family:Georgia,"Times New Roman",serif;
+      font-weight:700;
+      font-size:clamp(32px,4.8vw,56px);
+      line-height:1.08;
+      letter-spacing:-0.5px;
+      margin:0 0 18px;
+      color:var(--ink);
+    }
+    h1 em{
+      font-style:italic;
+      color:var(--accent);
+    }
+    .lede{
+      font-size:18px;
+      color:var(--ink-soft);
+      max-width:760px;
+      margin:0;
+    }
+    .meta{
+      margin-top:22px;
+      font-size:13px;
+      color:var(--ink-soft);
+      display:flex;
+      gap:28px;
+      flex-wrap:wrap;
+    }
+    .meta span strong{color:var(--ink);font-weight:600}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:28px;
+    }
+    @media (max-width:960px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}}
+    @media (max-width:640px){.grid{grid-template-columns:1fr;gap:20px}.wrap{padding:48px 20px 72px}}
+
+    .card{
+      display:block;
+      text-decoration:none;
+      color:inherit;
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:8px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      transition:transform .28s cubic-bezier(.2,.7,.2,1),box-shadow .28s cubic-bezier(.2,.7,.2,1),border-color .28s;
+    }
+    .card:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow-hover);
+      border-color:#C8BFA8;
+    }
+    .card:focus-visible{
+      outline:2px solid var(--accent);
+      outline-offset:3px;
+    }
+    .hero{
+      display:block;
+      width:100%;
+      aspect-ratio:16/9;
+      background:#EDE7D9;
+    }
+    .hero img{display:block;width:100%;height:100%;object-fit:cover}
+    .body{padding:22px 24px 24px}
+    .kicker{
+      font-size:11px;
+      letter-spacing:1.8px;
+      text-transform:uppercase;
+      color:var(--accent-warm);
+      font-weight:600;
+      margin:0 0 6px;
+    }
+    h2{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:22px;
+      margin:0 0 10px;
+      letter-spacing:-0.2px;
+      color:var(--ink);
+      font-weight:700;
+    }
+    p.desc{
+      margin:0 0 16px;
+      color:var(--ink-soft);
+      font-size:14.5px;
+      line-height:1.55;
+    }
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      font-size:13px;
+      color:var(--accent);
+      font-weight:600;
+      letter-spacing:0.2px;
+    }
+    .cta .arrow{
+      transition:transform .25s cubic-bezier(.2,.7,.2,1);
+      display:inline-block;
+    }
+    .card:hover .cta .arrow{transform:translateX(4px)}
+
+    footer{
+      margin-top:72px;
+      padding-top:28px;
+      border-top:1px solid var(--line);
+      color:var(--ink-soft);
+      font-size:13px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    footer a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+    footer a:hover{border-bottom-style:solid}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="intro">
+      <div class="eyebrow">AI for Economic Analysis</div>
+      <h1>Economic dashboards, <em>built with AI.</em></h1>
+      <p class="lede">
+        Six end-to-end economic analytics projects — from grocery inflation to shipping nowcasts —
+        built in roughly a month by one economist using Anthropic's Cowork. Each card links to the live dashboard.
+      </p>
+      <div class="meta">
+        <span><strong>Six dashboards</strong></span>
+        <span><strong>One economist</strong></span>
+        <span><strong>~One month</strong></span>
+      </div>
+    </header>
+
+    <section class="grid">
+
+      <a class="card" href="https://econtech-mas.github.io/sg-inflation-dashboard/" target="_blank" rel="noopener">
+        <div class="hero"><img src="images/grocery.svg" alt="Grocery price tracker illustration" loading="lazy"></div>
+        <div class="body">
+          <p class="kicker">Prices · Inflation</p>
+          <h2>Singapore Grocery Price Tracker</h2>
+          <p class="desc">Daily prices for ~90,000 SKUs across Singapore's three major supermarkets, classified into official CPI categories and aggregated into a chained price index.</p>
+          <span class="cta">Open dashboard <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a class="card" href="https://econtech-mas.github.io/shipping-nowcast/" target="_blank" rel="noopener">
+        <div class="hero"><img src="images/shipping.svg" alt="Shipping nowcast illustration" loading="lazy"></div>
+        <div class="body">
+          <p class="kicker">Shipping · Nowcasting</p>
+          <h2>Global Shipping Nowcast</h2>
+          <p class="desc">Near real-time vessel traffic deviations from counterfactual baselines, tracking disruption at major chokepoints and ports using IMF PortWatch AIS data.</p>
+          <span class="cta">Open dashboard <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a class="card" href="https://econtech-mas.github.io/iran-crisis-trade-monitor/" target="_blank" rel="noopener">
+        <div class="hero"><img src="images/iran.svg" alt="Iran crisis trade monitor illustration" loading="lazy"></div>
+        <div class="body">
+          <p class="kicker">Trade · Geopolitics</p>
+          <h2>Iran Crisis Trade Monitor</h2>
+          <p class="desc">Monthly bilateral trade flows from eight major economies, tracking the impact of the Hormuz closure on oil, fertilizer, and food supply chains.</p>
+          <span class="cta">Open dashboard <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a class="card" href="https://econtech-mas.github.io/sgx-sentiment/" target="_blank" rel="noopener">
+        <div class="hero"><img src="images/sgx.svg" alt="SGX sentiment illustration" loading="lazy"></div>
+        <div class="body">
+          <p class="kicker">Text · Sentiment</p>
+          <h2>SGX Sentiment Index</h2>
+          <p class="desc">Sentiment and uncertainty indices extracted from 90,000+ SGX-listed company filings, validated against official CPI and unemployment data.</p>
+          <span class="cta">Open dashboard <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a class="card" href="https://econtech-mas.github.io/property-dashboard/" target="_blank" rel="noopener">
+        <div class="hero"><img src="images/property.svg" alt="Singapore property market illustration" loading="lazy"></div>
+        <div class="body">
+          <p class="kicker">Housing · Property</p>
+          <h2>Singapore Property Market</h2>
+          <p class="desc">Residential market intelligence across all 28 URA districts — sale prices, rental yields, days-on-market, and price cuts — refreshed daily.</p>
+          <span class="cta">Open dashboard <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a class="card" href="https://econtech-mas.github.io/asean-dashboard/" target="_blank" rel="noopener">
+        <div class="hero"><img src="images/asean.svg" alt="ASEAN markets dashboard illustration" loading="lazy"></div>
+        <div class="body">
+          <p class="kicker">Markets · ASEAN</p>
+          <h2>ASEAN Markets Dashboard</h2>
+          <p class="desc">Real-time FX, 10-year government bond yields, equities, and key commodities across six ASEAN economies, with full source attribution.</p>
+          <span class="cta">Open dashboard <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+    </section>
+
+    <footer>
+      <div>Built for the MAS internal AI showcase · May 2026.</div>
+      <div>Powered by <a href="https://www.anthropic.com/cowork" target="_blank" rel="noopener">Cowork</a></div>
+    </footer>
+  </main>
+</body>
+</html>
